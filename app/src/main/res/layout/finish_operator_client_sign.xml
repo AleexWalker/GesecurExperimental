@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/gap_x5"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:fillViewport="true">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/Text.H6.Black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:gravity="start"
+        android:text="@string/OPERATION_FINISH_WORK_CLIENT_SIGN_DNI" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_dni"
+        style="@style/GesecurInputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintEnabled="false"
+        app:errorEnabled="false"
+        android:layout_marginTop="@dimen/gap_x4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/GesecurEditText"
+            android:id="@+id/edit_dni"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_obs"
+        style="@style/Text.H6.Black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:gravity="start"
+        android:layout_marginTop="@dimen/gap_x5"
+        android:text="@string/OPERATION_FINISH_WORK_CLIENT_SIGN_OBSERVATIONS" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_observation"
+        style="@style/GesecurInputText"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:hintEnabled="false"
+        app:errorEnabled="false"
+        android:gravity="start"
+        android:layout_marginTop="@dimen/gap_x4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/GesecurEditText"
+            android:id="@+id/edit_observation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:inputType="textMultiLine|textCapSentences"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_finished_faults"
+        android:text="@string/WORK_FINISH_FINISHED_WITH_FAULTS"
+        android:layout_marginTop="@dimen/gap_x3" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_ok"
+        style="@style/GesecurButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/OPERATION_FINISH_WORK_CLIENT_SIGN_ACCEPT"
+        android:layout_marginTop="@dimen/gap_x8" />
+
+</LinearLayout>

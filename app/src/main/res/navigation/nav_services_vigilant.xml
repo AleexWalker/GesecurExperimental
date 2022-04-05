@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_services_vigilant.xml"
+    app:startDestination="@id/vigilantServicesFragment">
+
+    <fragment
+        android:id="@+id/vigilantServicesFragment"
+        android:name="com.gesecur.app.ui.vigilant.services.VigilantServicesFragment"
+        android:label="VigilantServicesFragment"
+        tools:layout="@layout/fragment_services_vigilant">
+    </fragment>
+
+</navigation>

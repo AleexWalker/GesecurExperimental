@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D959aac"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.gesecur.app.ui.common.toolbar.GesecurModalToolbar
+        android:id="@+id/toolbar_modal"
+        style="@style/Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStartWithNavigation="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_material_type"
+        style="@style/GesecurInputText.Selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gap_x4"
+        app:hintEnabled="false"
+        app:errorEnabled="false"
+        android:enabled="false"
+        android:layout_margin="@dimen/gap_x3"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_modal">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/GesecurEditText"
+            android:id="@+id/edit_material_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/ADD_MATERIAL_SELECT_MATERIAL_HINT"
+            android:inputType="textEmailAddress"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/btn_type_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_chevron_down"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="@id/input_material_type"
+        app:layout_constraintEnd_toEndOf="@id/input_material_type"
+        app:layout_constraintBottom_toBottomOf="@id/input_material_type" />
+
+    <ImageButton
+        style="@style/GesecurButton.Image"
+        android:id="@+id/btn_min"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_minus"
+        app:layout_constraintEnd_toStartOf="@id/tv_quantity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_quantity"
+        app:layout_constraintBottom_toBottomOf="@id/tv_quantity"
+        app:layout_constraintHorizontal_chainStyle="packed" />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/GesecurListItem"
+        android:id="@+id/tv_quantity"
+        android:layout_width="22dp"
+        android:layout_height="wrap_content"
+        tools:text="10"
+        android:gravity="center"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeMaxTextSize="16sp"
+        app:autoSizeTextType="uniform"
+        android:layout_marginTop="63dp"
+        android:layout_marginStart="@dimen/gap_x3"
+        android:layout_marginEnd="@dimen/gap_x3"
+        app:layout_constraintTop_toBottomOf="@id/input_material_type"
+        app:layout_constraintStart_toEndOf="@id/btn_min"
+        app:layout_constraintEnd_toStartOf="@id/btn_plus"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <ImageButton
+        style="@style/GesecurButton.Image"
+        android:id="@+id/btn_plus"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_plus"
+        android:padding="0dp"
+        android:layout_marginEnd="@dimen/gap_x3"
+        app:layout_constraintStart_toEndOf="@id/tv_quantity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_quantity"
+        app:layout_constraintBottom_toBottomOf="@id/tv_quantity"
+        app:layout_constraintHorizontal_chainStyle="packed" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

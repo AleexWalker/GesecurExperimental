@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <files-path
+        name="logs"
+        path="logs" />
+    <files-path
+        name="debug-logs"
+        path="debug-logs" />
+    <files-path
+        name="temp"
+        path="temp/" />
+
+    <files-path name="shared" path="./"/>
+    <files-path name="files" path="." />
+    <external-path name="external_path" path="." />
+    <external-files-path name="external_files" path="." />
+</paths>

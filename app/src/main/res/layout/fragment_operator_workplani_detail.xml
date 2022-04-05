@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/htab_maincontent"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/separator3">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/htab_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/htab_collapse_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:titleEnabled="false">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_collapseMode="pin">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/GesecurListMarker"
+                        android:id="@+id/tv_identifier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="PAR 1"
+                        android:layout_marginHorizontal="@dimen/gap_x2"
+                        app:layout_constraintTop_toTopOf="@id/tv_order_desc"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_order_desc"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/GesecurText.Big"
+                        android:id="@+id/tv_order_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/gap_x4"
+                        tools:text="asd"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tv_identifier"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/Text.S3.Gray"
+                        android:id="@+id/tv_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:layout_marginEnd="@dimen/gap_x2"
+                        android:layout_marginBottom="@dimen/gap_x2"
+                        android:layout_marginTop="@dimen/gap_x1"
+                        tools:text="Calle maldonado Calle maldonado vCalle maldonadoCalle maldonadoCalle maldonadoCalle maldonadoCalle maldonado"
+                        app:layout_constraintTop_toBottomOf="@id/tv_order_desc"
+                        app:layout_constraintStart_toStartOf="@id/tv_order_desc"
+                        app:layout_constraintEnd_toEndOf="@id/tv_order_desc"/>
+
+                    <View
+                        android:id="@+id/separator1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray"
+                        android:layout_marginTop="@dimen/gap_x4"
+                        app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/GesecurText.SubTitle"
+                        android:id="@+id/tv_localization_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/gap_x4"
+                        android:text="@string/WORK_ORDER_LOCALIZATON"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/separator1" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/GesecurText.Medium"
+                        android:id="@+id/tv_order_localization"
+                        android:lineSpacingExtra="2dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gap_x1"
+                        android:layout_marginStart="@dimen/gap_x4"
+                        android:layout_marginEnd="@dimen/gap_x2"
+                        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit aenean vestibulum, augue id convallis"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_localization_title"
+                        app:layout_constraintEnd_toStartOf="@id/tv_initiated"/>
+
+
+                <Button
+                    android:id="@+id/tv_initiated"
+                    style="@style/GesecurButton.Outlined"
+                    android:layout_width="wrap_content"
+                    android:text="@string/WORK_ORDER_INITIATED"
+                    android:enabled="false"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/gap_x4"
+                    app:layout_constraintTop_toTopOf="@id/tv_order_localization"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_order_localization"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:theme="@style/Theme.Gesecur.Tab"
+            style="@style/Gesecur.TabLayout"
+            android:id="@+id/tablayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order_localization"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.tabs.TabItem
+                style="@style/Theme.Gesecur.Tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/WORK_ORDER_JOBS"
+                android:text="@string/WORK_ORDER_JOBS" />
+
+            <com.google.android.material.tabs.TabItem
+                style="@style/Theme.Gesecur.Tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/WORK_ORDER_MATERIALS"
+                android:text="@string/WORK_ORDER_MATERIALS" />
+
+            <com.google.android.material.tabs.TabItem
+                style="@style/Theme.Gesecur.Tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/OTHER_TITLE"
+                android:text="@string/OTHER_TITLE" />
+
+            <com.google.android.material.tabs.TabItem
+                style="@style/Theme.Gesecur.Tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/WORK_PART_RESOURCES"
+                android:text="@string/WORK_PART_RESOURCES" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <View
+            android:id="@+id/separator2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/gap_x3"
+            android:layout_marginTop="@dimen/gap_x3"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/gray"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="70dp"
+            app:cardBackgroundColor="@color/white">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_jobs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/job_item"
+                tools:itemCount="2"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_materials"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/material_item"
+                android:visibility="gone"
+                tools:itemCount="2"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/other_item"
+                android:visibility="gone"
+                tools:itemCount="2"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_personal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/personal_item"
+                android:visibility="gone"
+                tools:itemCount="2"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <View
+        android:id="@+id/separator3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mediumGray"
+        app:layout_constraintBottom_toTopOf="@id/bottom_container" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/bottom_container"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_init_order"
+            style="@style/GesecurButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/WORK_ORDER_INIT_ORDER"
+            android:layout_margin="@dimen/gap_x3"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_see_part"
+            style="@style/GesecurButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/WORK_ORDER_SEE_PART"
+            android:layout_margin="@dimen/gap_x3"/>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,63 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/gap_x4"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/gap_x2"
+        android:src="@drawable/ic_close"
+        android:id="@+id/btn_close"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        style="@style/Text.H5.Black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_title"
+        android:text="@string/ADD_MATERIAL_SEARCH_MATERIAL"
+        app:layout_constraintTop_toTopOf="@id/btn_close"
+        app:layout_constraintBottom_toBottomOf="@id/btn_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_close"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="@dimen/gap_x2" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_material_search"
+        style="@style/GesecurInputText.Selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gap_x4"
+        app:hintEnabled="false"
+        app:errorEnabled="false"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/GesecurEditText"
+            android:id="@+id/edit_material_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/ADD_MATERIAL_SEARCH_MATERIAL"
+            android:inputType="textPersonName"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_filter"
+        android:paddingTop="@dimen/gap_x3"
+        android:paddingStart="@dimen/gap_x3"
+        android:paddingEnd="@dimen/gap_x3"
+        android:clipToPadding="false"
+        android:layout_marginTop="@dimen/gap_x2"
+        android:overScrollMode="always"
+        app:layout_constraintTop_toBottomOf="@id/input_material_search"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

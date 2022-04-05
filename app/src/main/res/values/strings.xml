@@ -1,0 +1,186 @@
+<resources>
+    <string name="APP_NAME">Gesecur</string>
+
+    <!--GENERAL-->
+    <string name="ALERT_CLOSE">Cerrar</string>
+    <string name="UTILS_YES">Sí</string>
+    <string name="UTILS_NO">No</string>
+    <string name="UTILS_ACCEPT">Aceptar</string>
+    <string name="UTILS_CANCEL">Cancel</string>
+    <string name="UTILS_OPTIONS_DIALOG_TITLE">Selecciona una opción</string>
+
+    <!--ERRORES-->
+    <string name="ERROR_NO_INTERNET">No tienes conexión a Internet</string>
+    <string name="ERROR_TIMEOUT">Tiempo de espera excedido, por favor inténtalo otra vez</string>
+    <string name="ERROR_UNKNOWN">Error inesperado, por favor inténtalo otra vez</string>
+    <string name="ERROR_FORM_VALIDATION">Compruebe los datos del formulario</string>
+
+    <!--LOGIN-->
+    <string name="LOGIN_TITLE">Inicio de sesión</string>
+    <string name="LOGIN_EMAIL_PLACEHOLDER">Correo electrónico</string>
+    <string name="LOGIN_PASSWORD_PLACEHOLDER">Contraseña</string>
+    <string name="LOGIN_SEND_BUTTON">Iniciar sesión</string>
+    <string name="LOGIN_FORGOT_PASSWORD_LINK">He olvidado mi contraseña</string>
+
+    <!-- LOGIN VIGILANT -->
+    <string name="LOGIN_VIGILANT_CODE_PLACEHOLDER">Código de acceso</string>
+    <string name="LOGIN_VIGILANT_TITLE">Inicio de sesión</string>
+
+    <!--OPERATOR-->
+    <string name="OPERATOR_TAB_PARTS">Partes</string>
+    <string name="OPERATOR_TAB_PLANNINGS">Planificaciones</string>
+    <string name="OPERATOR_TAB_INCIDENCE">Incidencias</string>
+    <string name="OPERATOR_LIST_TAB">Listado</string>
+    <string name="OPERATOR_MAP_TAB">Mapa</string>
+    
+
+    <!--VIGILANT-->
+    <string name="VIGILANT_TAB_NEWS">Novedades</string>
+    <string name="VIGILANT_TAB_INCIDENCE">Incidencias</string>
+
+    <!--ORDER-->
+    <string name="WORK_PART_EMPTY_LIST">No hay partes</string>
+    <string name="WORK_PLANI_EMPTY_LIST">No hay planificaciones</string>
+    <string name="WORK_PART_IDENTIFIER">PAR %s</string>
+    <string name="WORK_PLANI_IDENTIFIER">PLA %s</string>
+    <string name="WORK_ORDER_TITLE">Parte de trabajo</string>
+    <string name="WORK_PLANIFICATION_TITLE">Planificación de trabajo</string>
+    <string name="WORK_ORDER_LOCALIZATON">Localización</string>
+    <string name="WORK_ORDER_JOBS">Trabajos</string>
+    <string name="WORK_ORDER_MATERIALS">Materiales</string>
+    <string name="WORK_PART_RESOURCES">Recursos</string>
+    <string name="WORK_PART_ATTACHMENTS">Adjuntos</string>
+    <string name="WORK_ORDER_INIT_ORDER">Iniciar trabajo</string>
+    <string name="WORK_ORDER_SEE_PART">Ver parte</string>
+    <string name="WORK_ORDER_ADD_JOB">Añadir trabajo</string>
+    <string name="WORK_ORDER_ADD_MATERIAL">Añadir material</string>
+    <string name="WORK_ORDER_ADD_ATTACHMENT">Añadir adjunto</string>
+    <string name="WORK_ORDER_ACTIVE_TITLE">Orden activa</string>
+    <string name="WORK_ORDER_FINISH_BUTTON">Finalizar</string>
+    <string name="WORK_ORDER_INITIATED">Iniciada</string>
+    <string name="WORK_ORDER_DELETE_JOB_QUESTION">¿Seguro que quieres eliminar este trabajo?</string>
+    <string name="WORK_ORDER_DELETE_MATERIAL_QUESTION">¿Seguro que quieres eliminar este material?</string>
+    <string name="WORK_FINISH_EXTRA_TIME_TEXT">Indica si has utilizado tiempo extra para este trabajo</string>
+    <string name="WORK_FINISH_EXTRA_TIME_HINT">Tiempo extra (minutos)</string>
+    <string name="WORK_FINISH_FINISHED_WITH_FAULTS">Finalizado con faltas</string>
+    <string name="WORK_ORDER_CLIENT_CONFIRM">Conforme cliente</string>
+    <string name="WORK_PART_CONFIRMATION_DETAIL_TITLE">Detalle</string>
+    <string name="WORK_ORDER_CONFIRMATION_BUTTON">Confirmar</string>
+    <string name="WORK_PART_EMPTY_DATA">Sin datos que mostrar</string>
+    <string name="WORK_PERSONAL_ITEM_INIT_DATE">Inicio: %s</string>
+    <string name="WORK_PERSONAL_ITEM_END_DATE">Fin: %s</string>
+    <string name="WORK_PLANIFICATION_ITEM_PLANNED">Planificado: %d</string>
+    <string name="WORK_PLANIFICATION_ITEM_REST">Restante: %d</string>
+    <string name="WORK_PART_SEE_ATTACHMENT">Ver adjunto</string>
+
+    <!-- JOB -->
+    <string name="ADD_JOB_TITLE">Añadir trabajo</string>
+    <string name="ADD_JOB_SELECT_JOB_HINT">Seleccionar trabajo</string>
+    <string name="ADD_JOB_SELECT_SERVICE_HINT">Seleccionar servicio</string>
+    <string name="ADD_JOB_DURATION">Duración</string>
+    <string name="ADD_JOB_OR_SEPARATOR">o</string>
+    <string name="ADD_JOB_DESC_HINT">Escribir trabajo…</string>
+    <string name="ADD_JOB_SAVE_BUTTON">Guardar</string>
+    <string name="ADD_JOB_NOT_CODIFIED_SELECTOR_TEXT">Otros</string>
+
+    <!-- ATTACHMENT -->
+
+    <string name="ADD_ATTACHMENT_TITLE">Añadir adjunto</string>
+    <string name="ADD_ATTACHMENT_NOTES">Notas</string>
+    <string name="ADD_ATTACHMENT_SAVE_BUTTON">Guardar</string>
+    <string name="ADD_ATTACHMENT_ADD_FILES">Adjuntar archivos</string>
+    <string name="ADD_ATTACHMENT_SUCCESS">Adjunto añadido correctamente</string>
+    <string name="ADD_ATTACHMENT_IMAGE_TAKE_FROM_QUESTION">¿Desde donde deseas obtener la imagen?</string>
+    <string name="ADD_ATTACHMENT_IMAGE_TAKE_FROM_CAMERA">Cámara</string>
+    <string name="ADD_ATTACHMENT_IMAGE_TAKE_FROM_GALLERY">Galería</string>
+
+    <!-- MATERIAL -->
+    <string name="ADD_MATERIAL_TITLE">Añadir material</string>
+    <string name="ADD_MATERIAL_SELECT_MATERIAL_HINT">Seleccionar material</string>
+    <string name="ADD_MATERIAL_OR_SEPARATOR">o</string>
+    <string name="ADD_MATERIAL_DESC_HINT">Escribir material…</string>
+    <string name="ADD_MATERIAL_SAVE_BUTTON">Guardar</string>
+    <string name="ADD_MATERIAL_SEARCH_MATERIAL">Buscar material</string>
+
+    <!-- INCIDENCE -->
+    <string name="INCIDENCES_ADD_INCIDENCE">Añadir incidencia</string>
+    <string name="INCIDENCES_LIST_EMPTY">No hay incidencias</string>
+    <string name="ADD_INCIDENCE_TITLE">Añadir incidencia</string>
+    <string name="ADD_INCIDENCE_SELECT_INCIDENCE_HINT">Seleccionar incidencia</string>
+    <string name="ADD_INCIDENCE_OR_SEPARATOR">o</string>
+    <string name="ADD_INCIDENCE_LOCALIZATION_TITLE">Localización</string>
+    <string name="ADD_INCIDENCE_CHANGE_LOCALIZATION">Cambiar</string>
+    <string name="ADD_INCIDENCE_SAVE_BUTTON">Guardar</string>
+    <string name="ADD_INCIDENCE_ADD_FILES">Adjuntar archivos</string>
+    <string name="ADD_INCIDENCE_DESC_HINT">Escribir descripción</string>
+    <string name="ADD_INCIDENCE_SUCCESS">Incidencia añadida correctamente</string>
+    
+    <!-- VIGILANT -->
+    <string name="VIGILANT_EXIT_QUESTION">¿Seguro que deseas cerrar sesión?</string>
+    <string name="VIGILANT_REGISTRY">Registro</string>
+    <string name="VIGILANT_OBSERVATIONS">Observaciones</string>
+    <string name="VIGILANT_EMERGENCY">Emergency</string>
+    <string name="VIGILANT_NO_URGENT_REQUIREMENT">Requerimiento no urgente</string>
+    <string name="VIGILANT_NO_NEWS">Sin novedades</string>
+    <string name="VIGILANT_START_TURN">Iniciar turno</string>
+    <string name="VIGILANT_ACTIVE_TURN">Turno activo</string>
+    <string name="VIGILANT_END_TURN">Finalizar</string>
+    <string name="VIGILANT_REGISTRIES_EMPTY">No hay novedades</string>
+    <string name="VIGILANT_NEWS_REGISTRY_SUCCESS">Registro añadido correctamente</string>
+    <string name="VIGILANT_TURN_FINISHED_SUCCESS">El turno se ha finalizado correctamente</string>
+
+    <string name="VIGILANT_OBSERVATIONS_ADD_OBSERVATION_HINT">Añadir observaciones</string>
+    <string name="VIGILANT_OBSERVATIONS_EMPTY">No hay observaciones</string>
+    <string name="VIGILANT_NEWS_OBSERVATION_SUCCESS">Observación añadida correctamente</string>
+
+    <string name="PROFILE_EXPENSES">Gastos</string>
+    <string name="PROFILE_MILEAGE">Kilometraje</string>
+    <string name="PROFILE_EXPENSES_EMPTY">No hay gastos</string>
+    <string name="PROFILE_MILEAGE_EMPTY">No hay kilometraje</string>
+    <string name="PROFILE_EXPENSE_QUANTITY">Cantidad: %d</string>
+    <string name="PROFILE_EXPENSE_PRICE">Importe: %.2f€</string>
+    <string name="PROFILE_EXPENSE_DELETION_QUESTION">¿Seguro que quieres borrar este gasto?</string>
+    <string name="PROFILE_EXPENSE_DELETED_SUCCESS">Gasto eliminado correctamente</string>
+    <string name="PROFILE_EXPENSE_ADD_EXPENSE_TITLE">Añadir gasto</string>
+    <string name="PROFILE_EXPENSE_ADD_PART_HINT">Seleccione un parte</string>
+    <string name="PROFILE_EXPENSE_ADD_TYPE_HINT">Tipo de gasto</string>
+    <string name="PROFILE_EXPENSE_ADD_NOTE_HINT">Nota</string>
+    <string name="PROFILE_EXPENSE_ADD_QUANTITY">Cantidad</string>
+    <string name="PROFILE_EXPENSE_ADD_PRICE">Importe</string>
+    <string name="PROFILE_EXPENSE_ADD_SAVE_BUTTON">Guardar</string>
+    <string name="PROFILE_EXPENSE_ADD_EXPENSE_SUCCESS">Gasto añadido correctamente</string>
+
+    <string name="PROFILE_MILEAGE_INITIAL">Kilometraje inicial: %.2fkm</string>
+    <string name="PROFILE_MILEAGE_END">Kilometraje final: %.2fkm</string>
+    <string name="PROFILE_MILEAGE_DELETION_QUESTION">¿Seguro que quieres borrar este kilometraje?</string>
+    <string name="PROFILE_MILEAGE_DELETED_SUCCESS">Kilometraje eliminado correctamente</string>
+    <string name="PROFILE_MILEAGE_ADD_MILEAGE_TITLE">Añadir kilometraje</string>
+    <string name="PROFILE_MILEAGE_ADD_PART_HINT">Seleccione un parte</string>
+    <string name="PROFILE_MILEAGE_ADD_VEHICLE_HINT">Vehículo</string>
+    <string name="PROFILE_MILEAGE_ADD_NOTE_HINT">Nota</string>
+    <string name="PROFILE_MILEAGE_ADD_END_MILEAGE">Kilometros finales</string>
+    <string name="PROFILE_MILEAGE_ADD_INI_MILEAGE">Kilometros iniciales</string>
+    <string name="PROFILE_MILEAGE_ADD_SAVE_BUTTON">Guardar</string>
+    <string name="PROFILE_MILEAGE_ADD_MILEAGE_SUCCESS">Kilometraje añadido correctamente</string>
+    <string name="PROFILE_MILEAGE_ADD_OWN_VEHICLE">Vehículo propio</string>
+    <string name="PROFILE_CLOSE_SESSION">Cerrar sesión</string>
+    <string name="PROFILE_CLOSE_SESSION_QUESTION">¿Seguro que quiere cerrar sesión?</string>
+
+    <string name="DEFAULT_NOTIFICATION_CHANNEL_ID">General</string>
+    <string name="NOTIFICATION_TURN_TEXT">Recuerda realizar un registro de las novedades</string>
+    <string name="KEEP_ALIVE_TEXT">¿Cada cuanto tiempo quieres que el sistema te envíe un recordatorio para notificar el estado?</string>
+    <string name="KEEP_ALIVE_HINT">Introduce los minutos (min. 15 minutos)</string>
+    <string name="OTHER_TITLE">Otros</string>
+    <string name="JOB_DURATION_TEXT">%d min.</string>
+    <string name="USER_PROFILE_TITLE">Perfil</string>
+
+    <string name="OPERATION_FINISH_WORK_CLIENT_SIGN_DNI">DNI</string>
+    <string name="OPERATION_FINISH_WORK_CLIENT_SIGN_OBSERVATIONS">Observaciones</string>
+    <string name="OPERATION_FINISH_WORK_CLIENT_SIGN_ACCEPT">Aceptar</string>
+    <string name="OPERATION_FINISH_WORK_PART_CLOSED_SUCCESS">El parte se ha cerrado correctamente</string>
+    <string name="PROFILE_ADD_MILEAGE_EXPENSE_IMAGE_TAKE_FROM_QUESTION">¿Desde donde deseas obtener la imagen?</string>
+    <string name="PROFILE_ADD_MILEAGE_EXPENSE_IMAGE_TAKE_FROM_CAMERA">Cámara</string>
+    <string name="PROFILE_ADD_MILEAGE_EXPENSE_IMAGE_TAKE_FROM_GALLERY">Galería</string>
+    <string name="DES">DES</string>
+    <string name="SERVICES">SERVICIOS</string>
+</resources>

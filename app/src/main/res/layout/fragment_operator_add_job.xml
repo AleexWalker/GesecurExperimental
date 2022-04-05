@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.gesecur.app.ui.common.toolbar.GesecurModalToolbar
+        android:id="@+id/toolbar_modal"
+        style="@style/Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStartWithNavigation="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_job_type"
+        style="@style/GesecurInputText.Selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gap_x4"
+        app:hintEnabled="false"
+        app:errorEnabled="false"
+        android:enabled="false"
+        android:layout_margin="@dimen/gap_x3"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_modal">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/GesecurEditText"
+            android:id="@+id/edit_job_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/ADD_JOB_SELECT_JOB_HINT"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/btn_type_selector"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_chevron_down"
+        android:backgroundTint="@android:color/transparent"
+        android:scaleType="fitEnd"
+        app:layout_constraintStart_toStartOf="@+id/input_job_type"
+        app:layout_constraintTop_toTopOf="@id/input_job_type"
+        app:layout_constraintEnd_toEndOf="@id/input_job_type"
+        app:layout_constraintBottom_toBottomOf="@id/input_job_type" />
+
+    <View
+        android:id="@+id/line_separator_left"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/mediumGray"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="@dimen/gap_x3"
+        android:layout_marginEnd="@dimen/gap_x3"
+        app:layout_constraintTop_toBottomOf="@id/input_job_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_or_separator"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/GesecurText.SubTitle"
+        android:id="@+id/tv_or_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ADD_JOB_OR_SEPARATOR"
+        android:includeFontPadding="false"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintTop_toTopOf="@id/line_separator_left"
+        app:layout_constraintBottom_toBottomOf="@id/line_separator_left"
+        app:layout_constraintStart_toEndOf="@id/line_separator_left"
+        app:layout_constraintEnd_toStartOf="@id/line_separator_right"/>
+
+    <View
+        android:id="@+id/line_separator_right"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/mediumGray"
+        android:layout_marginStart="@dimen/gap_x3"
+        android:layout_marginEnd="@dimen/gap_x3"
+        app:layout_constraintTop_toTopOf="@id/line_separator_left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_or_separator"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_job_description"
+        style="@style/GesecurInputText.Selector"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_marginTop="@dimen/gap_x4"
+        app:hintEnabled="false"
+        app:errorEnabled="false"
+        android:enabled="false"
+        android:layout_marginHorizontal="@dimen/gap_x3"
+        app:layout_goneMarginTop="@dimen/gap_x8"
+        app:layout_constraintTop_toBottomOf="@id/tv_or_separator">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/GesecurEditText"
+            android:id="@+id/edit_job_desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:hint="@string/ADD_JOB_DESC_HINT"
+            android:inputType="textCapSentences|textMultiLine"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_job_duration"
+        style="@style/GesecurInputText.Selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gap_x4"
+        app:hintEnabled="false"
+        app:errorEnabled="false"
+        android:enabled="false"
+        android:layout_margin="@dimen/gap_x3"
+        app:layout_constraintTop_toBottomOf="@id/input_job_description">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/GesecurEditText"
+            android:id="@+id/edit_job_duration"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/ADD_JOB_DURATION"
+            android:inputType="number"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

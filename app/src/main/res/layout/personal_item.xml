@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/gap_x4"
+    android:paddingVertical="@dimen/gap_x3"
+    android:orientation="vertical"
+    tools:ignore="RtlSymmetry">
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/Text.P2.Black"
+        android:id="@+id/tv_personal_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:ellipsize="end"
+        tools:text="Nombre de usuario"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_identifier"
+        app:layout_constraintEnd_toStartOf="@id/ic_arrow_right"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/gap_x1">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/Text.S2.Gray"
+            android:id="@+id/tv_start"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            tools:text="10:00 - 12:00"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/Text.S2.Gray"
+            android:id="@+id/tv_end"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            tools:text="10:00 - 12:00"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_marginTop="@dimen/gap_x3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mediumGray" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

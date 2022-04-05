@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_observations"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0D959aac"
+            android:paddingTop="@dimen/gap_x2"
+            android:clipChildren="false"
+            tools:listitem="@layout/observation_item"
+            tools:itemCount="4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintBottom_toTopOf="@id/divider"
+            />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/GesecurText.Title"
+        android:id="@+id/tv_empty"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/VIGILANT_OBSERVATIONS_EMPTY"
+        android:layout_marginEnd="@dimen/gap_x3"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mediumGray"
+        app:layout_constraintBottom_toTopOf="@id/addObservationContainer" />
+
+    <LinearLayout
+        android:id="@+id/addObservationContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_observation"
+            style="@style/GesecurInputText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:hintEnabled="false"
+            app:errorEnabled="false"
+            android:layout_marginVertical="@dimen/gap_x2"
+            android:layout_marginHorizontal="@dimen/gap_x3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/GesecurEditText"
+                android:id="@+id/edit_observation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/VIGILANT_OBSERVATIONS_ADD_OBSERVATION_HINT"
+                android:inputType="textMultiLine|textCapSentences"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_send"
+            android:padding="@dimen/gap_x2"
+            android:src="@drawable/ic_send"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_marginEnd="@dimen/gap_x4" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

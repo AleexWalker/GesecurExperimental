@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_operator"
+    app:startDestination="@id/operatorFragment">
+
+    <fragment
+        android:id="@+id/operatorFragment"
+        android:name="com.gesecur.app.ui.operator.OperatorFragment"
+        android:label="OperatorFragment"
+        tools:layout="@layout/fragment_operator">
+
+        <action
+            android:id="@+id/action_operatorFragment_to_operatorWorkOrderDetailFragment"
+            app:destination="@id/operatorWorkOrderDetailFragment" />
+
+        <action
+            android:id="@+id/action_operatorFragment_to_operatorWorkPlaniDetailFragment"
+            app:destination="@id/operatorWorkPlaniDetailFragment" />
+
+        <action
+            android:id="@+id/action_operatorFragment_to_incidencesAddIncidenceFragment"
+            app:destination="@id/incidencesAddIncidenceFragment" />
+        <action
+            android:id="@+id/action_operatorFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/operatorWorkOrderDetailFragment"
+        android:name="com.gesecur.app.ui.operator.workorder.parts.OperatorWorkPartDetailFragment"
+        android:label="OperatorWorkOrderDetailFragment" >
+        <argument
+            android:name="workPartId"
+            app:argType="long" />
+        <argument
+            android:name="editable"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <action
+            android:id="@+id/action_operatorWorkOrderDetailFragment_to_operatorAddJobFragment"
+            app:destination="@id/operatorAddJobFragment"
+            app:enterAnim="@anim/pop_to_top"
+            app:popExitAnim="@anim/pop_out_bottom"/>
+        <action
+            android:id="@+id/action_operatorWorkOrderDetailFragment_to_operatorAddMaterialFragment"
+            app:destination="@id/operatorAddMaterialFragment"
+            app:enterAnim="@anim/pop_to_top"
+            app:popExitAnim="@anim/pop_out_bottom" />
+
+        <action android:id="@+id/action_operatorFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+        <action
+            android:id="@+id/action_operatorWorkOrderDetailFragment_to_operatorWorkPartDetailCompleteFragment"
+            app:destination="@id/operatorWorkPartDetailCompleteFragment" />
+        <action
+            android:id="@+id/action_operatorWorkOrderDetailFragment_to_operatorWorkPlaniDetailFragment"
+            app:destination="@id/operatorWorkPlaniDetailFragment" />
+        <action
+            android:id="@+id/action_operatorWorkOrderDetailFragment_to_addAttachmentFragment"
+            app:destination="@id/addAttachmentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/operatorWorkPartDetailCompleteFragment"
+        android:name="com.gesecur.app.ui.operator.workorder.parts.OperatorWorkPartDetailCompletedFragment"
+        android:label="OperatorWorkPartDetailCompletedFragment" >
+        <argument
+            android:name="workPartId"
+            app:argType="long" />
+
+        <action android:id="@+id/action_operatorFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/operatorWorkPlaniDetailFragment"
+        android:name="com.gesecur.app.ui.operator.workorder.plani.OperatorWorkPlaniDetailFragment"
+        android:label="OperatorWorkPlaniDetailFragment" >
+
+        <argument
+            android:name="workPlaniId"
+            app:argType="long" />
+        <argument
+            android:name="date"
+            app:argType="long" />
+
+        <action android:id="@+id/action_operatorFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+        <action
+            android:id="@+id/action_operatorWorkPlaniDetailFragment_to_operatorWorkOrderDetailFragment"
+            app:destination="@id/operatorWorkOrderDetailFragment" />
+    </fragment>
+
+    <navigation android:id="@+id/nav_operator_management_parts"
+        app:startDestination="@id/operatorManagementFragmentParts">
+
+        <fragment
+            android:id="@+id/operatorManagementFragmentParts"
+            android:name="com.gesecur.app.ui.operator.OperatorManagementPartsFragment"
+            android:label="OperatorManagementFragment"
+            tools:layout="@layout/fragment_operator_parts_management" />
+
+    </navigation>
+
+    <navigation android:id="@+id/nav_operator_management_plani"
+        app:startDestination="@id/operatorManagementFragmentPlani">
+
+        <fragment
+            android:id="@+id/operatorManagementFragmentPlani"
+            android:name="com.gesecur.app.ui.operator.OperatorManagementPlaniFragment"
+            android:label="OperatorManagementFragment"
+            tools:layout="@layout/fragment_operator_parts_management" />
+
+    </navigation>
+
+    <navigation android:id="@+id/nav_operator_incidences"
+        app:startDestination="@id/incidencesFragment">
+        <fragment
+            android:id="@+id/incidencesFragment"
+            android:name="com.gesecur.app.ui.incidences.IncidencesFragment"
+            android:label="IncidencesFragment"
+            tools:layout="@layout/fragment_incidences_list" >
+            <action
+                android:id="@+id/action_incidencesFragment_to_incidencesAddIncidenceFragment"
+                app:enterAnim="@anim/pop_to_top"
+                app:popExitAnim="@anim/pop_out_bottom"
+                app:destination="@id/incidencesAddIncidenceFragment" />
+        </fragment>
+
+    </navigation>
+    <fragment
+        android:id="@+id/operatorAddJobFragment"
+        android:name="com.gesecur.app.ui.operator.workorder.job.OperatorAddJobFragment"
+        android:label="OperatorAddJobFragment" >
+        <argument
+            android:name="workorder_id"
+            app:argType="long"
+            />
+
+        <argument
+            android:name="workpart_id"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/operatorAddMaterialFragment"
+        android:name="com.gesecur.app.ui.operator.workorder.material.OperatorAddMaterialFragment"
+        android:label="OperatorAddMaterialFragment" >
+
+        <argument
+            android:name="workOrderId"
+            app:argType="long" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/incidencesAddIncidenceFragment"
+        android:name="com.gesecur.app.ui.incidences.IncidencesAddIncidenceFragment"
+        android:label="IncidencesAddIncidenceFragment" >
+        <action
+            android:id="@+id/action_incidencesAddIncidenceFragment_to_incidenceMapFragment"
+            app:destination="@id/incidenceMapFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/incidenceMapFragment"
+        android:name="com.gesecur.app.ui.incidences.IncidenceMapFragment"
+        android:label="IncidenceMapFragment" >
+        <argument
+            android:name="lat"
+            app:argType="float" />
+        <argument
+            android:name="lon"
+            app:argType="float" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.gesecur.app.ui.profile.UserProfileFragment"
+        android:label="UserProfileFragment" >
+        <action
+            android:id="@+id/action_userProfileFragment_to_personalExpensesListFragment"
+            app:destination="@id/personalExpensesListFragment" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_personalMileageListFragment"
+            app:destination="@id/personalMileageListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalExpensesListFragment"
+        android:name="com.gesecur.app.ui.profile.expense.PersonalExpensesListFragment"
+        android:label="PersonalExpensesListFragment" >
+        <action
+            android:id="@+id/action_personalExpensesListFragment_to_personalAddExpenseFragment"
+            app:destination="@id/personalAddExpenseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalMileageListFragment"
+        android:name="com.gesecur.app.ui.profile.mileage.PersonalMileageListFragment"
+        android:label="PersonalMileageListFragment" >
+        <action
+            android:id="@+id/action_personalMileageListFragment_to_personalAddMileageFragment"
+            app:destination="@id/personalAddMileageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalAddExpenseFragment"
+        android:name="com.gesecur.app.ui.profile.expense.PersonalAddExpenseFragment"
+        android:label="PersonalAddExpenseFragment" />
+    <fragment
+        android:id="@+id/personalAddMileageFragment"
+        android:name="com.gesecur.app.ui.profile.mileage.PersonalAddMileageFragment"
+        android:label="PersonalAddMileageFragment" />
+    <fragment
+        android:id="@+id/addAttachmentFragment"
+        android:name="com.gesecur.app.ui.operator.workorder.attachment.AddAttachmentFragment"
+        android:label="AddAttachmentFragment" >
+        <argument
+            android:name="partId"
+            app:argType="long" />
+    </fragment>
+
+
+</navigation>

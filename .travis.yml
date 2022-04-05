@@ -1,0 +1,81 @@
+os: linux
+dist: trusty
+language: android
+jdk: oraclejdk8
+
+android:
+  components:
+    - android-30
+    - build-tools-30.0.3
+
+  licenses:
+    - android-sdk-preview-license-.+
+    - android-sdk-license-.+
+    - google-gdk-license-.+
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+
+cache:
+  directories:
+    - "$HOME/.gradle/caches/"
+    - "$HOME/.gradle/wrapper/"
+
+before_install:
+  - chmod +x gradlew
+  - yes | sdkmanager "platforms;android-30"
+  - yes | sdkmanager "build-tools;30.0.3"
+
+jobs:
+  include:
+    - stage: pull-request-bundle
+      if: type = pull_request
+      name: Pull Request - Bundle Release
+      script:
+        - "./gradlew clean bundleRelease"
+
+    - stage: deploy-appcenter-development
+      if: tag =~ ^v.+(-dev)$
+      name: Deploy to App Center - Development
+      script:
+        - "./gradlew clean appCenterAssembleAndUploadDevelopmentRelease"
+
+    - stage: deploy-appcenter-production
+      if: tag =~ ^v.+(-dev)$
+      name: Deploy to App Center - Production
+      script:
+        - "./gradlew clean appCenterAssembleAndUploadProductionRelease"
+
+    - stage: deploy-playstore
+      if: tag =~ ^v.+(?<!-dev)$
+      name: Deploy to Play Store
+      script:
+        - "./gradlew clean publishProductionReleaseBundle"
+
+notifications:
+  slack:
+    - if: type = pull_request
+      rooms:
+        - secure: Vsu62VOR737eIuEaLvUKkSqmM7Z5B66cusQZ/xBjpAcQIUa3B6R3CB27UxKxf+bdM5jT459WDkwt9ZQMB5DpPMNs3x+276xD25jjiHDM3j7jG2ixFU/iuVQ/YpxJOdiooOgRZ3uzuLtrJ6A3wwG0FlMcmu63rXG7o7ax3/4GtlfLkoxIoY100r+dxqS7mhx59N/tyM81POv62X5KsIIp4OghBYefB7QY6Xe9KsjhP1zDHXR3YDlLkqSdEkktHzuCr43uDdnH/qq80SVbLBv4Im90Curbhfo/7JyYKTrehoqCs4GA9il7ZQLyUIzck74+neAj4qhHTHUPyB0vRMsziWSM8MCkD3FxN+v+b/TsM4bgR8bHEejaO4ZMKCRDXoQ9immCNdMSMxKOPC+bDG4Vwnek87gFeOAPGobHNtlYSvamrNwxQYQYii9rSdBNMqwKr9mJY260SmHE7rx3PEoTknsqpMDJqXfXToumPeEBAnWB0aVdkSZQGURAlc+Rt2HmOkvN6RKFHhl/AEfuFOvTQAqoJr4MeEUHcdUMiD8NJhwQyHLQVYOnG1k44N2dXS/y8Wl9pKnuWwYK0eAHO7hDw2SaHoqyUPu5fOQHKYmUiXinOLe9VneR2DApncbbelZ2NDY837KtwX9w44pawlYdkKLnrBsLAw++dbZdVElIl+8=
+      on_success: never
+      on_failure: always
+      template:
+        - "*Project:* %{repository_name}"
+        - "*Build:* <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository_slug}@%{branch}"
+        - "*Duration:* %{duration}"
+        - "*PR:* <%{pull_request_url}|#%{pull_request_number}>"
+        - "*Result:* %{result}"
+        - "*Message:* %{message}"
+
+    - if: type != pull_request
+      rooms:
+        - secure: Vsu62VOR737eIuEaLvUKkSqmM7Z5B66cusQZ/xBjpAcQIUa3B6R3CB27UxKxf+bdM5jT459WDkwt9ZQMB5DpPMNs3x+276xD25jjiHDM3j7jG2ixFU/iuVQ/YpxJOdiooOgRZ3uzuLtrJ6A3wwG0FlMcmu63rXG7o7ax3/4GtlfLkoxIoY100r+dxqS7mhx59N/tyM81POv62X5KsIIp4OghBYefB7QY6Xe9KsjhP1zDHXR3YDlLkqSdEkktHzuCr43uDdnH/qq80SVbLBv4Im90Curbhfo/7JyYKTrehoqCs4GA9il7ZQLyUIzck74+neAj4qhHTHUPyB0vRMsziWSM8MCkD3FxN+v+b/TsM4bgR8bHEejaO4ZMKCRDXoQ9immCNdMSMxKOPC+bDG4Vwnek87gFeOAPGobHNtlYSvamrNwxQYQYii9rSdBNMqwKr9mJY260SmHE7rx3PEoTknsqpMDJqXfXToumPeEBAnWB0aVdkSZQGURAlc+Rt2HmOkvN6RKFHhl/AEfuFOvTQAqoJr4MeEUHcdUMiD8NJhwQyHLQVYOnG1k44N2dXS/y8Wl9pKnuWwYK0eAHO7hDw2SaHoqyUPu5fOQHKYmUiXinOLe9VneR2DApncbbelZ2NDY837KtwX9w44pawlYdkKLnrBsLAw++dbZdVElIl+8=
+      on_success: always
+      on_failure: always
+      template:
+        - "*Project:* %{repository_name}"
+        - "*Build:* <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository_slug}@%{branch}"
+        - "*Duration:* %{duration}"
+        - "*Result:* %{result}"
+        - "*Message:* %{message}"

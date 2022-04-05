@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemTextAppearanceActive">@style/BottomNavigationView.Text</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavigationView.Text</item>
+<!--        <item name="itemTextColor"></item>-->
+<!--        <item name="itemIconTint"></item>-->
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="elevation">0dp</item>
+<!--        <item name="backgroundTint">@color/</item>-->
+    </style>
+
+    <style name="BottomNavigationView.Text" parent="">
+<!--        <item name="fontFamily">@font/</item>-->
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Text" />
+
+    <!--H4-->
+    <style name="Text.H4">
+        <item name="fontFamily">@font/sfp_bold</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+    </style>
+
+    <style name="Text.H4.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--H5-->
+    <style name="Text.H5">
+        <item name="fontFamily">@font/sfp_bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <style name="Text.H5.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text.H5.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--H6-->
+    <style name="Text.H6">
+        <item name="fontFamily">@font/sfp_bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Text.H6.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text.H6.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text.H7">
+        <item name="fontFamily">@font/sfp_bold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Text.H7.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text.H7.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text.P3">
+        <item name="fontFamily">@font/sfp_semibold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    
+    <!--P1-->
+    <style name="Text.P1">
+        <item name="fontFamily">@font/sfp_semibold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="Text.P1.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text.P1.White">
+        <item name="colorOnSurface">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    
+
+    <!--P2-->
+    <style name="Text.P2">
+        <item name="fontFamily">@font/sfp_semibold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Text.P2.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text.P2.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--S2-->
+    <style name="Text.S1">
+        <item name="fontFamily">@font/sfp_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Text.S1.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text.S1.Gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="Text.S1.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text.S2">
+        <item name="fontFamily">@font/sfp_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Text.S2.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text.S2.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text.S2.Gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="Text.S3">
+        <item name="fontFamily">@font/sfp_regular</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+
+    <style name="Text.S3.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text.S3.Gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="Text.S3.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--Toolbar-->
+    <style name="Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="Toolbar.Title" parent="">
+        <item name="android:textAppearance">@style/Text.H5.Black</item>
+    </style>
+
+    <style name="Gesecur.TabLayout" parent="">
+        <item name="tabGravity">start</item>
+        <item name="tabMode">auto</item>
+        <item name="tabPaddingStart">@dimen/gap_x4</item>
+        <item name="tabPaddingEnd">@dimen/gap_x4</item>
+        <item name="tabIndicatorColor">@color/primary</item>
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabIndicatorHeight">3dp</item>
+    </style>
+
+    <style name="GesecurText.Tab" parent="">
+        <item name="android:textAppearance">@style/Text.H7</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="GesecurButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="cornerRadius">6dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="textAllCaps">false</item>
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textAppearance">@style/Text.P1.White</item>
+        <item name="borderWidth">0dp</item>
+        <item name="rippleColor">@color/white</item>
+    </style>
+    
+    <style name="GesecurButton.News">
+        <item name="android:textAppearance">@style/Text.P3</item>
+    </style>
+
+    <style name="GesecurButton.Outlined">
+        <item name="cornerRadius">4dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="borderWidth">1dp</item>
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="strokeColor">@color/primary</item>
+        <item name="android:textAppearance">@style/Text.H7</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="GesecurButton.Toggle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="cornerRadius">6dp</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">@color/toogle_button_color</item>
+        <item name="android:textAppearance">@style/Text.H7</item>
+        <item name="android:textColor">@color/toggle_button_text_color</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/button_tab_stroke_color</item>
+        <item name="rippleColor">@color/white</item>
+    </style>
+
+    <style name="GesecurButton.Image" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="background">?attr/selectableItemBackground</item>
+        <item name="rippleColor">@color/gray</item>
+    </style>
+
+    <style name="GesecurInputText" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeColor">@color/mediumGray</item>
+        <item name="boxBackgroundColor">@color/grayAlpha</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="hintTextColor">@color/gray</item>
+        <item name="android:textAppearance">@style/Text.P2.Black</item>
+        <item name="hintTextAppearance">@style/Text.P2.Black</item>
+        <item name="shapeAppearance">@style/GesecurEditTextShape</item>
+    </style>
+
+    <style name="GesecurEditText">
+        <item name="colorAccent">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/black</item>
+        <item name="colorControlHighlight">@color/black</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">@dimen/gap_x6</item>
+        <item name="android:paddingEnd">@dimen/gap_x6</item>
+        <item name="android:textAppearance">@style/Text.P2.Black</item>
+        <item name="hintTextAppearance">@style/Text.P2.Black</item>
+    </style>
+
+    <style name="GesecurEditTextShape" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">6dp</item>
+        <item name="strokeColor">@color/mediumGray</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="GesecurCalendar">
+        <item name="contentPadding">@dimen/gap_x2</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="strokeColor">@color/calendar_stroke_color</item>
+        <item name="borderWidth">2dp</item>
+        <item name="cardCornerRadius">6dp</item>
+        <item name="android:backgroundTint">@color/grayAlpha</item>
+        <item name="elevation">0dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="rippleColor">@color/grayAlpha</item>
+    </style>
+
+    <style name="GesecurCalendarTitle">
+        <item name="android:textAppearance">@style/Text.S3</item>
+        <item name="android:textColor">@color/calendar_text_color</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="GesecurCalendarText">
+        <item name="android:textAppearance">@style/Text.S1</item>
+        <item name="android:textColor">@color/calendar_text_color</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="GesecurListItem">
+        <item name="android:textAppearance">@style/Text.S1.Black</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:gravity">center_vertical|start</item>
+    </style>
+
+    <style name="GesecurListMarker">
+        <item name="android:textAppearance">@style/Text.P1</item>
+        <item name="android:padding">0dp</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:gravity">center_vertical|start</item>
+    </style>
+
+    <style name="GesecurListItem.Medium">
+        <item name="android:textAppearance">@style/Text.S2.Black</item>
+    </style>
+
+    <style name="GesecurText">
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="GesecurText.Title" parent="">
+        <item name="android:textAppearance">@style/Text.H5.Black</item>
+        <item name="android:gravity">center</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="GesecurText.Big">
+        <item name="android:textAppearance">@style/Text.S1</item>
+    </style>
+
+    <style name="GesecurText.Medium">
+        <item name="android:textAppearance">@style/Text.S2</item>
+    </style>
+
+    <style name="GesecurText.SubTitle">
+        <item name="android:textAppearance">@style/Text.P1</item>
+    </style>
+
+    <style name="GesecurText.Info">
+        <item name="android:textAppearance">@style/Text.S2.Gray</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="GesecurFabOption">
+        <item name="android:layout_height">35dp</item>
+        <item name="android:textAppearance">@style/Text.S2.Black</item>
+        <item name="shapeAppearanceOverlay">@style/GesecurFabOptionShape</item>
+        <item name="android:padding">0dp</item>
+        <item name="rippleColor">@color/mediumGray</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="GesecurFabOptionShape" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">6dp</item>
+    </style>
+
+    <style name="GesecurInputText.Selector">
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxBackgroundColor">@color/white</item>
+    </style>
+    
+
+</resources>

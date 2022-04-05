@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="80dp"
+    android:paddingStart="@dimen/gap_x5"
+    android:paddingTop="@dimen/gap_x2"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="RtlSymmetry">
+
+    <View
+        android:id="@+id/separator_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:alpha=".3"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/ic_arrow_right"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_arrow_right"
+        android:layout_marginEnd="@dimen/gap_x4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/separator_line" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/GesecurListMarker"
+            android:id="@+id/tv_identifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="PAR 1"
+            android:layout_marginEnd="@dimen/gap_x2"
+            app:layout_constraintTop_toTopOf="@id/tv_desc"
+            app:layout_constraintBottom_toBottomOf="@id/tv_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_desc"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/GesecurListItem"
+            android:id="@+id/tv_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:ellipsize="end"
+            tools:text="Lorem ipsum dolor sit amet consectetur adipiscing elit aenean vestibulum, augue id convallis lacinia, quam dolor placerat nunc, ut eleifend ante lacus ut nibh. Curabitur lacus est, iaculis eu magna ac, mattis suscipit ligula. In tincidunt ante accumsan, posuere mi ac, egestas quam. Suspendisse scelerisque suscipit leo, ut laoreet dolor mattis nec. Etiam venenatis scelerisque quam. Sed eu dui a enim vestibulum interdum ac quis ligula. Nulla placerat tristique nisl, luctus malesuada lectus tincidunt eget. Mauris laoreet, quam aliquet suscipit auctor, felis erat dignissim nibh, vitae lacinia lectus libero quis ligula. Duis pellentesque nunc non venenatis vulputate. Quisque nec tellus pellentesque, interdum ex semper, convallis enim. Sed vel posuere mauris. Aliquam semper aliquet lacus, id pretium mi porta vel."
+            android:layout_marginEnd="@dimen/gap_x2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_identifier"
+            app:layout_constraintEnd_toStartOf="@id/ic_arrow_right"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/Text.S3.Gray"
+            android:id="@+id/tv_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            tools:text="10:00 - 12:00"
+            android:layout_marginEnd="@dimen/gap_x1"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_desc" />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/Text.S3.Gray"
+        android:id="@+id/tv_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_marginEnd="@dimen/gap_x2"
+        android:layout_marginBottom="@dimen/gap_x2"
+        android:layout_marginTop="@dimen/gap_x1"
+        tools:text="Calle maldonado Calle maldonado vCalle maldonadoCalle maldonadoCalle maldonadoCalle maldonadoCalle maldonado"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc"
+        app:layout_constraintBottom_toTopOf="@id/separator_line"
+        app:layout_constraintStart_toEndOf="@id/tv_hour"
+        app:layout_constraintEnd_toStartOf="@id/ic_arrow_right"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

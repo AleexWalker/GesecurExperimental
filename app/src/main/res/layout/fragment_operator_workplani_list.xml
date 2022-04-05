@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_work_planis"
+        android:paddingTop="@dimen/gap_x2"
+        android:clipToPadding="false"
+        tools:itemCount="4"
+        tools:listitem="@layout/work_order_item" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/GesecurText.SubTitle"
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/WORK_PLANI_EMPTY_LIST"
+        android:padding="@dimen/gap_x4"/>
+
+
+</FrameLayout>

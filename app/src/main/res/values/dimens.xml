@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gap_x1">4dp</dimen>
+    <dimen name="gap_x2">8dp</dimen>
+    <dimen name="gap_x3">12dp</dimen>
+    <dimen name="gap_x4">16dp</dimen>
+    <dimen name="gap_x5">20dp</dimen>
+    <dimen name="gap_x6">24dp</dimen>
+    <dimen name="gap_x8">32dp</dimen>
+
+    <dimen name="windowHorizontalGap">@dimen/gap_x6</dimen>
+
+</resources>

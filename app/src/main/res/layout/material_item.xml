@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="61dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingStart="@dimen/gap_x4">
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mediumGray"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageButton
+        style="@style/GesecurButton.Image"
+        android:id="@+id/btn_min"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_minus"
+        app:layout_constraintEnd_toStartOf="@id/tv_quantity"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/separator" />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/GesecurListItem.Medium"
+        android:id="@+id/tv_quantity"
+        android:layout_width="22dp"
+        android:layout_height="wrap_content"
+        tools:text="10"
+        android:gravity="center"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeMaxTextSize="16sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/separator"
+        app:layout_constraintEnd_toStartOf="@id/btn_plus"/>
+
+    <ImageButton
+        style="@style/GesecurButton.Image"
+        android:id="@+id/btn_plus"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_plus"
+        android:layout_marginEnd="@dimen/gap_x3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/separator" />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/GesecurListItem.Medium"
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        tools:text="Lorem ipsum dolor sit amet consectetur adipiscing elit aenean vestibulum, augue id convallis lacinia, quam dolor placerat nunc, ut eleifend ante lacus ut nibh. Curabitur lacus est, iaculis eu magna ac, mattis suscipit ligula. In tincidunt ante accumsan, posuere mi ac, egestas quam. Suspendisse scelerisque suscipit leo, ut laoreet dolor mattis nec. Etiam venenatis scelerisque quam. Sed eu dui a enim vestibulum interdum ac quis ligula. Nulla placerat tristique nisl, luctus malesuada lectus tincidunt eget. Mauris laoreet, quam aliquet suscipit auctor, felis erat dignissim nibh, vitae lacinia lectus libero quis ligula. Duis pellentesque nunc non venenatis vulputate. Quisque nec tellus pellentesque, interdum ex semper, convallis enim. Sed vel posuere mauris. Aliquam semper aliquet lacus, id pretium mi porta vel."
+        android:layout_marginEnd="@dimen/gap_x4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/separator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_min"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

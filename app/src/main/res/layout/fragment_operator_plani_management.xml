@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <Space
+        android:id="@+id/topSpace"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gap_x4"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:divider="@drawable/calendar_divider"
+        android:paddingHorizontal="@dimen/gap_x2"
+        app:layout_constraintTop_toBottomOf="@id/topSpace"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/calendar_item"
+        tools:itemCount="7"/>
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/type_toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleSelection="true"
+        app:selectionRequired="true"
+        app:checkedButton="@id/btn_list"
+        android:layout_marginHorizontal="@dimen/gap_x3"
+        android:layout_marginTop="@dimen/gap_x4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_calendar">
+
+        <Button
+            android:id="@+id/btn_list"
+            style="@style/GesecurButton.Toggle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/OPERATOR_LIST_TAB"
+            />
+        <Button
+            android:id="@+id/btn_map"
+            style="@style/GesecurButton.Toggle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/OPERATOR_MAP_TAB"
+            />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_workplanis"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="false"
+        app:navGraph="@navigation/nav_operator_workplani"
+        app:layout_constraintTop_toBottomOf="@id/type_toggle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

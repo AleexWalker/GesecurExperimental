@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:contentPadding="@dimen/gap_x4"
+    app:cardCornerRadius="6dp"
+    android:layout_marginHorizontal="@dimen/gap_x3"
+    android:layout_marginVertical="@dimen/gap_x1"
+    android:background="@color/white">
+
+
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/GesecurListItem.Medium"
+        android:id="@+id/tv_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Lorem ipsum dolor sit amet consectetur adipiscing elit aenean vestibulum, augue id convallis lacinia, quam dolor placerat nunc, ut eleifend ante lacus ut nibh. Curabitur lacus est, iaculis eu magna ac, mattis suscipit ligula. In tincidunt ante accumsan, posuere mi ac, egestas quam. Suspendisse scelerisque suscipit leo, ut laoreet dolor mattis nec. Etiam venenatis scelerisque quam. Sed eu dui a enim vestibulum interdum ac quis ligula. Nulla placerat tristique nisl, luctus malesuada lectus tincidunt eget. Mauris laoreet, quam aliquet suscipit auctor, felis erat dignissim nibh, vitae lacinia lectus libero quis ligula. Duis pellentesque nunc non venenatis vulputate. Quisque nec tellus pellentesque, interdum ex semper, convallis enim. Sed vel posuere mauris. Aliquam semper aliquet lacus, id pretium mi porta vel."
+        android:layout_marginEnd="@dimen/gap_x4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/separator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/registry_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/observations_container"
+        app:cardCornerRadius="6dp"
+        android:layout_margin="@dimen/gap_x3"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/gap_x3">
+
+            <ImageView
+                android:id="@+id/img_bullets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_bullet_list"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Text.P2.Black"
+                android:id="@+id/tv_registry_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_x3"
+                android:text="@string/VIGILANT_REGISTRY"
+                app:layout_constraintTop_toBottomOf="@id/img_bullets"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/img_registry_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_registry_title"
+                app:layout_constraintBottom_toBottomOf="@id/tv_registry_title"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/observations_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/registry_container"
+        app:cardCornerRadius="6dp"
+        android:layout_margin="@dimen/gap_x3"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/gap_x3">
+
+            <ImageView
+                android:id="@+id/img_observations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_comments"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Text.P2.Black"
+                android:id="@+id/tv_observations_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_x3"
+                android:text="@string/VIGILANT_OBSERVATIONS"
+                app:layout_constraintTop_toBottomOf="@id/img_observations"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/img_comments_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_observations_title"
+                app:layout_constraintBottom_toBottomOf="@id/tv_observations_title"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_emergency"
+        style="@style/GesecurButton.News"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/VIGILANT_EMERGENCY"
+        android:paddingVertical="@dimen/gap_x6"
+        android:layout_marginHorizontal="@dimen/gap_x3"
+        android:backgroundTint="@color/emergency_button_color"
+        app:layout_constraintTop_toBottomOf="@id/registry_container"
+        app:layout_constraintBottom_toTopOf="@id/btn_no_urgent"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_no_urgent"
+        style="@style/GesecurButton.News"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/VIGILANT_NO_URGENT_REQUIREMENT"
+        android:layout_marginHorizontal="@dimen/gap_x3"
+        android:layout_marginTop="@dimen/gap_x6"
+        android:paddingVertical="@dimen/gap_x6"
+        android:backgroundTint="@color/no_urgent_button_color"
+        app:layout_constraintTop_toBottomOf="@id/btn_emergency"
+        app:layout_constraintBottom_toTopOf="@id/btn_no_news"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_no_news"
+        style="@style/GesecurButton.News"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/VIGILANT_NO_NEWS"
+        android:layout_marginHorizontal="@dimen/gap_x3"
+        android:layout_marginBottom="@dimen/gap_x6"
+        android:layout_marginTop="@dimen/gap_x6"
+        android:paddingVertical="@dimen/gap_x6"
+        android:backgroundTint="@color/no_news_button_color"
+        app:layout_constraintTop_toBottomOf="@id/btn_no_urgent"
+        app:layout_constraintBottom_toTopOf="@id/separator3"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <View
+        android:id="@+id/separator3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mediumGray"
+        app:layout_constraintBottom_toTopOf="@id/bottom_container" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_container"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_init_turn"
+        style="@style/GesecurButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/VIGILANT_START_TURN"
+        android:layout_margin="@dimen/gap_x3"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/active_turn_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/gap_x4"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_end_turn"
+                style="@style/GesecurButton.Outlined"
+                android:layout_width="wrap_content"
+                android:text="@string/VIGILANT_END_TURN"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/GesecurText.SubTitle"
+                android:id="@+id/tv_active_turn_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/VIGILANT_ACTIVE_TURN"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn_end_turn"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/GesecurText.Info"
+                android:id="@+id/tv_active_turn_timer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="00:12:54"
+                app:layout_constraintTop_toBottomOf="@id/tv_active_turn_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_active_turn_title"
+                app:layout_constraintEnd_toEndOf="@id/tv_active_turn_title"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

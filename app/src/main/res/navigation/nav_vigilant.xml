@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_vigilant"
+    app:startDestination="@id/vigilantFragment">
+
+    <fragment
+        android:id="@+id/vigilantFragment"
+        android:name="com.gesecur.app.ui.vigilant.VigilantFragment"
+        android:label="VigilantFragment"
+        tools:layout="@layout/fragment_vigilant">
+
+        <action
+            android:id="@+id/action_vigilantFragment_to_vigilantRegistryListFragment"
+            app:destination="@id/vigilantRegistryListFragment" />
+        <action
+            android:id="@+id/action_vigilantFragment_to_vigilantObservationsListFragment"
+            app:destination="@id/vigilantObservationsListFragment" />
+        <action
+            android:id="@+id/action_vigilantFragment_to_incidencesAddIncidenceFragment2"
+            app:destination="@id/incidencesAddIncidenceFragment2" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/vigilantRegistryListFragment"
+        android:name="com.gesecur.app.ui.vigilant.registry.VigilantRegistryListFragment"
+        android:label="VigilantRegistryListFragment" >
+        <argument
+            android:name="turnId"
+            app:argType="long" />
+    </fragment>
+
+    <navigation android:id="@+id/nav_vigilant_news" app:startDestination="@id/vigilantNewsFragment">
+        <fragment
+            android:id="@+id/vigilantNewsFragment"
+            android:name="com.gesecur.app.ui.vigilant.VigilantNewsFragment"
+            android:label="VigilantNewsFragment"
+            tools:layout="@layout/fragment_vigilant_news" >
+
+        </fragment>
+
+
+    </navigation>
+
+    <navigation android:id="@+id/nav_vigilant_incidences"
+        app:startDestination="@id/incidencesFragment">
+        <fragment
+            android:id="@+id/incidencesFragment"
+            android:name="com.gesecur.app.ui.incidences.IncidencesFragment"
+            android:label="IncidencesFragment"
+            tools:layout="@layout/fragment_incidences_list" />
+    </navigation>
+    <fragment
+        android:id="@+id/vigilantObservationsListFragment"
+        android:name="com.gesecur.app.ui.vigilant.registry.VigilantObservationsListFragment"
+        android:label="VigilantObservationsListFragment" >
+
+    <argument
+        android:name="turnId"
+        app:argType="long" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/incidencesAddIncidenceFragment2"
+        android:name="com.gesecur.app.ui.incidences.IncidencesAddIncidenceFragment"
+        android:label="IncidencesAddIncidenceFragment" />
+
+
+</navigation>

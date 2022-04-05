@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.tabs.TabLayout
+        android:theme="@style/Theme.Gesecur.Tab"
+        style="@style/Gesecur.TabLayout"
+        android:id="@+id/tablayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tabGravity="start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.tabs.TabItem
+            style="@style/Theme.Gesecur.Tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="@string/VIGILANT_TAB_NEWS"
+            android:text="@string/VIGILANT_TAB_NEWS"
+            />
+
+        <com.google.android.material.tabs.TabItem
+            style="@style/Theme.Gesecur.Tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="@string/VIGILANT_TAB_INCIDENCE"
+            android:text="@string/VIGILANT_TAB_INCIDENCE"
+            />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mediumGray"
+        app:layout_constraintTop_toBottomOf="@id/tablayout" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_vigilant_tab"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="false"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

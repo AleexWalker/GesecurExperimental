@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.gesecur.app.ui.common.toolbar.GesecurModalToolbar
+        android:id="@+id/toolbar_modal"
+        style="@style/Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStartWithNavigation="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/gap_x4">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_part"
+                style="@style/GesecurInputText.Selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:errorEnabled="false"
+                android:enabled="false"
+                android:layout_marginHorizontal="@dimen/gap_x3"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/GesecurEditText"
+                    android:id="@+id/edit_part"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PROFILE_EXPENSE_ADD_PART_HINT"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/btn_part_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_down"
+                android:backgroundTint="@android:color/transparent"
+                app:layout_constraintTop_toTopOf="@id/input_part"
+                app:layout_constraintEnd_toEndOf="@id/input_part"
+                app:layout_constraintBottom_toBottomOf="@id/input_part" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_type"
+                style="@style/GesecurInputText.Selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_x4"
+                app:hintEnabled="false"
+                app:errorEnabled="false"
+                android:enabled="false"
+                android:layout_margin="@dimen/gap_x3"
+                app:layout_constraintTop_toBottomOf="@id/input_part">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/GesecurEditText"
+                    android:id="@+id/edit_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PROFILE_EXPENSE_ADD_TYPE_HINT"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/btn_type_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_down"
+                android:backgroundTint="@android:color/transparent"
+                app:layout_constraintTop_toTopOf="@id/input_type"
+                app:layout_constraintEnd_toEndOf="@id/input_type"
+                app:layout_constraintBottom_toBottomOf="@id/input_type" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_description"
+                style="@style/GesecurInputText.Selector"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:layout_marginHorizontal="@dimen/gap_x3"
+                app:errorEnabled="false"
+                app:hintEnabled="false"
+                android:layout_marginTop="@dimen/gap_x3"
+                app:layout_constraintTop_toBottomOf="@id/input_type">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_desc"
+                    style="@style/GesecurEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="top"
+                    android:hint="@string/PROFILE_EXPENSE_ADD_NOTE_HINT"
+                    android:inputType="textCapSentences|textMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_quantity"
+                style="@style/GesecurInputText.Selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_x4"
+                app:hintEnabled="false"
+                app:errorEnabled="false"
+                android:layout_margin="@dimen/gap_x3"
+                app:layout_constraintTop_toBottomOf="@id/input_description">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/GesecurEditText"
+                    android:id="@+id/edit_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PROFILE_EXPENSE_ADD_QUANTITY"
+                    android:inputType="number"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_price"
+                style="@style/GesecurInputText.Selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_x4"
+                app:hintEnabled="false"
+                app:errorEnabled="false"
+                android:layout_margin="@dimen/gap_x3"
+                app:layout_constraintTop_toBottomOf="@id/input_quantity">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/GesecurEditText"
+                    android:id="@+id/edit_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/PROFILE_EXPENSE_ADD_PRICE"
+                    android:inputType="numberDecimal"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_files"
+                style="@style/GesecurButton.Outlined"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                app:icon="@drawable/ic_attach"
+                app:iconTint="@color/primary"
+                android:text="@string/ADD_INCIDENCE_ADD_FILES"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_marginStart="@dimen/gap_x3"
+                android:layout_marginTop="@dimen/gap_x6"
+                app:layout_constraintTop_toBottomOf="@id/input_price"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/GesecurListItem"
+                android:id="@+id/tv_fileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:textColor="@color/primary"
+                android:visibility="gone"
+                tools:text="Filename"
+                tools:visibility="visible"
+                android:layout_marginStart="@dimen/gap_x3"
+                android:layout_marginTop="@dimen/gap_x6"
+                app:layout_constraintTop_toBottomOf="@id/input_price"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
